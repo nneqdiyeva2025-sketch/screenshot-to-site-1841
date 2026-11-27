@@ -14,6 +14,12 @@ import ustForma3 from "@/assets/ust-forma/ust-forma-9.png.asset.json";
 import ustForma4 from "@/assets/ust-forma/ust-forma-10.png.asset.json";
 import ustForma5 from "@/assets/ust-forma/ust-forma-11.png.asset.json";
 import ustForma6 from "@/assets/ust-forma/ust-forma-12.png.asset.json";
+import arkaTipsi1 from "@/assets/nails/nail-13.png.asset.json";
+import arkaTipsi2 from "@/assets/nails/nail-14.png.asset.json";
+import arkaTipsi3 from "@/assets/nails/nail-15.png.asset.json";
+import arkaTipsi4 from "@/assets/nails/nail-16.png.asset.json";
+import arkaTipsi5 from "@/assets/nails/nail-17.png.asset.json";
+import arkaTipsi6 from "@/assets/nails/nail-18.png.asset.json";
 
 export type Photo = { src: string; alt: string };
 
@@ -40,7 +46,7 @@ export const site = {
 export const services: Service[] = [
   { id: "ust-forma", name: "Üst forma", price: 30, photos: [{ src: ustForma1.url, alt: "Üst forma dırnaq dizaynı 1" }, { src: ustForma2.url, alt: "Üst forma dırnaq dizaynı 2" }, { src: ustForma3.url, alt: "Üst forma dırnaq dizaynı 3" }, { src: ustForma4.url, alt: "Üst forma dırnaq dizaynı 4" }, { src: ustForma5.url, alt: "Üst forma dırnaq dizaynı 5" }, { src: ustForma6.url, alt: "Üst forma dırnaq dizaynı 6" }] },
   { id: "tipsi", name: "Tipsi", price: 20, photos: [{ src: tipsi1.url, alt: "Tipsi dırnaq dizaynı 1" }, { src: tipsi2.url, alt: "Tipsi dırnaq dizaynı 2" }, { src: tipsi3.url, alt: "Tipsi dırnaq dizaynı 3" }, { src: tipsi4.url, alt: "Tipsi dırnaq dizaynı 4" }, { src: tipsi5.url, alt: "Tipsi dırnaq dizaynı 5" }, { src: tipsi6.url, alt: "Tipsi dırnaq dizaynı 6" }] },
-  { id: "arka-tipsi", name: "Arka tipsi", price: 25, photos: [] },
+  { id: "arka-tipsi", name: "Arka tipsi", price: 25, photos: [{ src: arkaTipsi1.url, alt: "Arka tipsi dırnaq dizaynı 1" }, { src: arkaTipsi2.url, alt: "Arka tipsi dırnaq dizaynı 2" }, { src: arkaTipsi3.url, alt: "Arka tipsi dırnaq dizaynı 3" }, { src: arkaTipsi4.url, alt: "Arka tipsi dırnaq dizaynı 4" }, { src: arkaTipsi5.url, alt: "Arka tipsi dırnaq dizaynı 5" }, { src: arkaTipsi6.url, alt: "Arka tipsi dırnaq dizaynı 6" }] },
   { id: "gel", name: "Gel bərkitmə və ya öz dırnağa gel", price: 20, photos: [] },
   { id: "formagel", name: "Formagel", price: 25, photos: [] },
   { id: "manikur", name: "Manikür", price: 5, photos: [] },
@@ -50,7 +56,7 @@ export const services: Service[] = [
 export const portfolioPhotos: Photo[] = [];
 
 // Photos of these services appear only in their own gallery (owner request).
-const exclusiveServices = ["tipsi", "ust-forma"];
+const exclusiveServices = ["tipsi", "ust-forma", "arka-tipsi"];
 
 export const allPortfolioPhotos = (): Photo[] => [
   ...portfolioPhotos,
