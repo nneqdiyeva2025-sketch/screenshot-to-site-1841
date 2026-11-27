@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- All site content (services, prices, photos, contact) lives in src/config/site.ts — single place to edit content.
+- Single-page site; service galleries open in place (state), not routes — user requested no navigation away.
+- Photos are lovable-assets pointers imported into site.ts; missing photos render the Placeholder component.
