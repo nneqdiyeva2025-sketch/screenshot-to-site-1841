@@ -40,7 +40,7 @@ export const site = {
   phoneHref: "tel:+994703435253",
   whatsapp: "https://wa.me/994703435253",
   instagram: "https://www.instagram.com/sumqayit_dirnaq_nur/",
-  heroImage: null as Photo | null,
+  heroImage: { src: arkaTipsi2.url, alt: "Master Nur tərəfindən zərif nude dırnaq dizaynı" } as Photo | null,
 };
 
 export const services: Service[] = [
