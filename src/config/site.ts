@@ -2,6 +2,13 @@
 // To add a photo: upload it with lovable-assets into src/assets, import the .asset.json pointer
 // below and add `{ src: pointer.url, alt: "..." }` to the right list.
 
+import tipsi1 from "@/assets/tipsi/tipsi-1.png.asset.json";
+import tipsi2 from "@/assets/tipsi/tipsi-2.png.asset.json";
+import tipsi3 from "@/assets/tipsi/tipsi-3.png.asset.json";
+import tipsi4 from "@/assets/tipsi/tipsi-4.png.asset.json";
+import tipsi5 from "@/assets/tipsi/tipsi-5.png.asset.json";
+import tipsi6 from "@/assets/tipsi/tipsi-6.png.asset.json";
+
 export type Photo = { src: string; alt: string };
 
 export type Service = {
@@ -26,17 +33,20 @@ export const site = {
 
 export const services: Service[] = [
   { id: "ust-forma", name: "Üst forma", price: 30, photos: [] },
-  { id: "tipsi", name: "Tipsi", price: 20, photos: [] },
+  { id: "tipsi", name: "Tipsi", price: 20, photos: [{ src: tipsi1.url, alt: "Tipsi dırnaq dizaynı 1" }, { src: tipsi2.url, alt: "Tipsi dırnaq dizaynı 2" }, { src: tipsi3.url, alt: "Tipsi dırnaq dizaynı 3" }, { src: tipsi4.url, alt: "Tipsi dırnaq dizaynı 4" }, { src: tipsi5.url, alt: "Tipsi dırnaq dizaynı 5" }, { src: tipsi6.url, alt: "Tipsi dırnaq dizaynı 6" }] },
   { id: "arka-tipsi", name: "Arka tipsi", price: 25, photos: [] },
   { id: "gel", name: "Gel bərkitmə və ya öz dırnağa gel", price: 20, photos: [] },
   { id: "formagel", name: "Formagel", price: 25, photos: [] },
   { id: "manikur", name: "Manikür", price: 5, photos: [] },
 ];
 
-// General portfolio photos; service photos are shown here too.
+// General portfolio photos; service photos are shown here too, except services listed in exclusiveServices.
 export const portfolioPhotos: Photo[] = [];
+
+// Photos of these services appear only in their own gallery (owner request).
+const exclusiveServices = ["tipsi"];
 
 export const allPortfolioPhotos = (): Photo[] => [
   ...portfolioPhotos,
-  ...services.flatMap((s) => s.photos),
+  ...services.filter((s) => !exclusiveServices.includes(s.id)).flatMap((s) => s.photos),
 ];
