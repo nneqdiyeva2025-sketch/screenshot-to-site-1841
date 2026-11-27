@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { site, allPortfolioPhotos } from "@/config/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { Services } from "@/components/site/Services";
+import { Placeholder } from "@/components/site/Placeholder";
 
 export const Route = createFileRoute("/")({
   head: () => ({
